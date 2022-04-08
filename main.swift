@@ -1,3 +1,9 @@
+var option1 : String = "a"
+var fnb : String = ""
+var howMany : Int
+var fnbMenu : [String] = []
+var fnbCount : [String] = []
+
 class Menu {
   func printMainMenu(){
     print("============================")
@@ -24,13 +30,6 @@ class Menu {
     print("")
   }
 }
-
-var option1 : String = "a"
-var fnb : String = ""
-var howMany : Int
-var fnbMenu : [String] = []
-var fnbCount : [String] = []
-
 var menu = Menu()
 
 while ((option1.lowercased()) != "x"){
