@@ -32,6 +32,23 @@ class Menu {
 }
 var menu = Menu()
 
+class AddFood {
+  var foodName : String
+
+  init (foodName: String){
+    self.foodName = foodName
+  }
+
+  func printAddMenu(){
+    print("How many \(self.foodName) you want to buy?")
+    let howMany = readLine() ?? ""
+    print("")
+
+    fnbMenu.append("\(self.foodName)")
+    fnbCount.append(howMany)
+  }
+}
+
 while ((option1.lowercased()) != "x"){
   
   menu.printMainMenu()
@@ -48,44 +65,24 @@ while ((option1.lowercased()) != "x"){
       print("")
 
       if (fnb.uppercased()) == "F03"{
-        print("How many Gado-Gado you want to buy?")
-        let howMany = readLine() ?? ""
-        print("")
-
-        fnbMenu.append("Gado-Gado")
-        fnbCount.append(howMany)
+        let addFood = AddFood(foodName: "Gado-Gado")
+        addFood.printAddMenu()
         
       } else if (fnb.uppercased()) == "F02"{
-        print("How many Chicken Satay you want to buy?")
-        let howMany = readLine() ?? ""
-        print("")
-
-        fnbMenu.append("Chicken Satay")
-        fnbCount.append(howMany)
+        let addFood = AddFood(foodName: "Chicken Satay")
+        addFood.printAddMenu()
         
       } else if (fnb.uppercased()) == "F01"{
-        print("How many Nasi Padang you want to buy?")
-        let howMany = readLine() ?? ""
-        print("")
-
-        fnbMenu.append("Nasi Padang")
-        fnbCount.append(howMany)
+        let addFood = AddFood(foodName: "Nasi Padang")
+        addFood.printAddMenu()
         
       } else if (fnb.uppercased()) == "B02"{
-        print("How many Mineral Water you want to buy?")
-        let howMany = readLine() ?? ""
-        print("")
-
-        fnbMenu.append("Mineral Water")
-        fnbCount.append(howMany)
+        let addFood = AddFood(foodName: "Mineral Water")
+        addFood.printAddMenu()
         
       } else if (fnb.uppercased()) == "B01"{
-        print("How many Ice Tea you want to buy?")
-        let howMany = readLine() ?? ""
-        print("")
-
-        fnbMenu.append("Ice Tea")
-        fnbCount.append(howMany)
+        let addFood = AddFood(foodName: "Ice Tea")
+        addFood.printAddMenu()
         
       } else if (fnb.uppercased()) == "Q"{
         break
